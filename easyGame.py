@@ -1,25 +1,4 @@
-# Python Number Guessing Game
-# Developed by Max Pertgen
-# v1.0 5/9/18
-
-import os
-import random
-import time
-
-
-while True:
-    numOfGuesses = 0
-    number = random.randint(1, 2)
-    guesses = []
-    guesses_set = set(guesses)
-
-    os.system('cls')
-    level = input("Welcome to the Number Guessing game! Would you like to try Easy, Medium, or Hard mode?")
-    
-
-    print("I'm thinking of a number between 1 and 10! Can you guess it?")
-
-    while numOfGuesses < 10:
+while numOfGuesses < 10:
         theGuess = int(input("Your guess: "))
         if theGuess in guesses:
             os.system('cls')
@@ -46,4 +25,4 @@ while True:
                 os.system('cls')
                 print("That is incorrect :( Please try again!")
                 print("So far you have guessed: " + ",".join(map(str,guesses)))
-                numOfGuesses += 1   
+                numOfGuesses += 1
